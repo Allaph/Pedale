@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
     android:id="@+id/activity_pedale"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -11,7 +12,24 @@
     tools:context="android.dominando.pedale.Pedale">
 
     <TextView
+        android:id="@+id/name_bike"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!" />
-</RelativeLayout>
+        tools:text="Hello World!" />
+    <TextView
+        android:id="@+id/price_bike"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:text="algo"/>
+    <TextView
+        android:id="@+id/color_bike"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:text="diferente"/>
+    <TextView
+        android:id="@+id/weight_bike"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:text="entendo"/>
+
+</LinearLayout>
