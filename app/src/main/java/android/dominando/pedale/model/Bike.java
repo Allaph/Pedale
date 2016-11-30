@@ -7,11 +7,11 @@ package android.dominando.pedale.model;
 public class Bike {
 
     private String mName;
-    private Integer mPrice;
+    private Float mPrice;
     private String mColor;
     private Integer mWeight;
 
-    public Bike(String name, Integer price, String color, Integer weight) {
+    public Bike(String name, Float price, String color, Integer weight) {
         this.mName   = name;
         this.mPrice  = price;
         this.mColor  = color;
@@ -23,7 +23,7 @@ public class Bike {
         return mName;
     }
 
-    public Integer getPrice(){
+    public Float getPrice(){
         return mPrice;
     }
 
@@ -33,5 +33,11 @@ public class Bike {
 
     public Integer getWeight() {
         return mWeight;
+    }
+
+    public Float getPromotion(Float discount){
+        Float newPrice;
+        newPrice = mPrice - discount;
+        return newPrice;
     }
 }

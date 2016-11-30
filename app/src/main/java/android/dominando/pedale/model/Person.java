@@ -30,4 +30,9 @@ public class Person {
         return mCpf;
     }
 
+    public String getaddName(String lastName){
+        String fullName;
+        fullName = mName + " " + lastName;
+        return fullName;
+    }
 }

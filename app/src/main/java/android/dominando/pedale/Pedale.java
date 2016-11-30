@@ -6,21 +6,41 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.TextView;
 
-import java.sql.SQLOutput;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Pedale extends AppCompatActivity {
 
-    Bike bicicleta1;
+    Bike bikeOne;
+    Bike bikeTwo;
+    Bike bikeThree;
+
+    List<Bike> bikes;
+
     Person cliente;
-    TextView textViewName, textViewPrice, textViewColor, textViewWeight;
-    TextView textViewNamePerson, textViewAddress, textViewCpf;
+
+    TextView textViewName;
+    TextView textViewPrice;
+    TextView textViewColor;
+    TextView textViewWeight;
+    TextView textViewNamePerson;
+    TextView textViewAddress;
+    TextView textViewCpf;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pedale);
 
-        bicicleta1 = new Bike("Caloi", 200, "blue", 8);
+        bikes = new ArrayList<>();
+
+        bikeOne   = new Bike("Caloi", 200f, "blue", 8);
+        bikeTwo   = new Bike("Monark", 500f, "black", 12);
+        bikeThree = new Bike("Oggi", 1000f, "red", 9);
+
+        bikes.add(bikeOne);
+        bikes.add(bikeTwo);
+        bikes.add(bikeThree);
 
         cliente = new Person("Gabriel", "Farol", "10794897460");
 
@@ -33,15 +53,15 @@ public class Pedale extends AppCompatActivity {
         textViewAddress = (TextView) findViewById(R.id.address_person);
         textViewCpf = (TextView) findViewById(R.id.cpf_person);
 
-        String price  = bicicleta1.getPrice().toString();
-        String weight = bicicleta1.getWeight().toString();
+        String price  = bikeOne.getPromotion(10f).toString();
+        String weight = bikeOne.getWeight().toString();
 
-        textViewName.setText(bicicleta1.getName());
+        textViewName.setText(bikeOne.getName());
         textViewPrice.setText(price);
-        textViewColor.setText(bicicleta1.getColor());
+        textViewColor.setText(bikeOne.getColor());
         textViewWeight.setText(weight);
 
-        textViewNamePerson.setText(cliente.getName());
+        textViewNamePerson.setText(cliente.getaddName("Rosa"));
         textViewAddress.setText(cliente.getAddress());
         textViewCpf.setText(cliente.getCpf());
     }
