@@ -22,6 +22,7 @@ public class Bike {
     public String getName() {
         return mName;
     }
+
     public Integer getPrice(){
         return mPrice;
     }

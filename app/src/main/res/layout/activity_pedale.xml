@@ -31,5 +31,19 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         tools:text="entendo"/>
-
+    <TextView
+        android:id="@+id/namePerson_person"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="nome"/>
+    <TextView
+        android:id="@+id/address_person"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+    tools:text="endereco"/>
+    <TextView
+        android:id="@+id/cpf_person"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="cpf"/>
 </LinearLayout>
